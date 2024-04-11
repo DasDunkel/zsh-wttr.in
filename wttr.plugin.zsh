@@ -57,7 +57,7 @@ weather(){
         LOCATION="${1}"
     elif [ -z "${1+x}" ] && [ ! -z "${WTTR_DEFAULT+x}" ] ; then # No location arg but default is set
         LOCATION="${WTTR_DEFAULT}"
-    elif [ -z "${1+x}" ] && [ -z "${WTTR_DEFAULT+x}" ] ; then # No location at all, exit
+    else # No location at all, exit
         echo "No location specified in WTTR_DEFAULT or arguments"
         return
     fi
